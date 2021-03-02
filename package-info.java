@@ -1,1 +1,1 @@
-package com.techouts.firsttask;
+package Day2;
