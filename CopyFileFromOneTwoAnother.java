@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 
 public class CopyFileFromOneTwoAnother
 {
-	public void copy(File a,File b)
+	public static void copy(File a,File b)
 	{
 		try {
 		FileInputStream fileInputStream=new FileInputStream(a);
@@ -32,6 +32,12 @@ public class CopyFileFromOneTwoAnother
 	}
 	public static void main(String[] arg)
 	{
+		File file=new File("C:\\Users\\d1\\chmv.txt");
+		
+		File file2=new File("D:\\tech.txt");
+		
+		copy(file, file2);
+		
 		
 	}
 
