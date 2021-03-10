@@ -1,25 +1,31 @@
-package FileIO;
+package String_Programs;
 
-import java.io.ObjectStreamClass;
+public class Demo1 implements Runnable {
+	String name;
+	String ph;
 
-public class Demo1 
-{
+	public Demo1(String name, String ph) {
+		this.name = name;
+		this.ph = ph;
+	}
+	public void run() {
+		// start();
+		walk();
+		end();
 
-	 
-	    public static void main(String[] args) {  
-	  
-	        // create a new object stream class for Integers  
-	        ObjectStreamClass osc = ObjectStreamClass.lookup(SmartPhone.class);  
-	  
-	        // get the value field from ObjectStreamClass for integers  
-	        System.out.println("" + osc.getField("price"));  
-	  
-	        // create a new object stream class for Calendar  
-	        ObjectStreamClass osc2 = ObjectStreamClass.lookup(String.class);  
-	  
-	        // get the Class instance for osc2  
-	        System.out.println("" + osc2.getField("hash"));  
-	  
-	    }  
+	}
+	// public void start() { System.out.println("thank you thread"); }
+
+	synchronized public void end()  {
+
+		System.out.println("after ehehe");
+		System.out.println(name + " " + ph);
+		System.out.println("hell world");
+	}
+
+	synchronized public void walk() {
+		System.out.println("ehehe");
+		//notify();
+	}
 
 }

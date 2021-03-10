@@ -1,20 +1,32 @@
-package FileIO;
+package String_Programs;
 
-import java.io.Console;
-
-public class Demo2 
+public class Demo2 extends Thread
 {
-public static void main(String...arg)
-{
-	/*
-	 * Console console=System.console(); System.out.println("enter your name");
-	 * String name=console.readLine(); System.out.println("welcome "+name);
-	 */
-	//public static void main(String args[]){    
-		Console c=System.console();    
-		System.out.println("Enter your name: ");    
-		String n=c.readLine();    
-		System.out.println("Welcome "+n);    
-		}    
+	
 
-}
+	      public void run()
+	      {
+	            System.out.println("run() method");
+	            String threadName = Thread.currentThread().getName();
+	            Integer threadPrio = Thread.currentThread().getPriority();
+	            System.out.println(threadName + " has priority " + threadPrio);
+	      }
+	      public static void main(String[] args) throws InterruptedException
+	      {
+	            Demo2 t1 = new Demo2();
+	            Demo2 t2 = new Demo2();
+	            Demo2 t3 = new Demo2();
+
+	            t1.setPriority(Thread.MAX_PRIORITY);
+	            t2.setPriority(Thread.MIN_PRIORITY);
+	            t3.setPriority(Thread.NORM_PRIORITY);
+	  
+	            t1.start();
+	            t2.start();
+	            t3.start();
+	      }
+		
+		
+	}
+
+
