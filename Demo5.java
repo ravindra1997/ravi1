@@ -1,11 +1,15 @@
-package com.techouts.day3;
+package com.general;
 
-public abstract class Demo5 
+public class Demo5
 {
-	void run()
+	public static void main(String...arg)
 	{
-		System.out.println();
+		System.out.println("hello");
+		int i=10110;
+		int a=3;
+		int b=2;
+		System.out.println(Math.pow(b, a));
+		
 	}
-	abstract void sample();
 
 }

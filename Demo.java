@@ -1,15 +1,26 @@
-package com.techouts.day3;
+package com.general;
 
-public class Demo 
+
+
+public class Demo
 {
-	int i=10;
-	public  Demo()
+	public static void main(String[] args)
 	{
+		int i=121;
+		int temp=i;
+		String sum="";
+		int n=0;
+		while(i>0)
+		{
+			n=i%2;
 		
-	}
-	public void run()
-	{
-		System.out.println("just run  it");
+	     	sum=sum+i;
+			i=i/2;
+			//.out.println(i);
+			System.out.println(n);
+		}
+		
+		
 	}
 
 }

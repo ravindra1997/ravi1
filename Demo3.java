@@ -1,18 +1,31 @@
-package com.techouts.day3;
+package com.general;
 
-public class Demo3
+import java.util.Scanner;
+
+
+public class Demo3 
 {
-	public static void run() 
+	public static void main(String[] args)
 	{
-		System.out.println("hi");
-	}
-	public static void run1()
-	{
-		System.out.println("rani");
-	}
-	public void run3()
-	{
-		
+		Scanner scanner=new Scanner(System.in);
+		int n=scanner.nextInt();
+		if(n/2==0)
+		{
+			System.out.println("weird");
+		}
+		if((n/2==0)&&(n>2&&n<5))
+		{
+			System.out.println("not weird");
+		}
+		if((n/2==0)&&(n>=6&&n<=20))
+		{
+			System.out.println("weird");
+		}
+		if(n/2==0 && n>=20)
+		{
+			System.out.println("not weird");
+		}
+		System.out.println();
 	}
 	
 
